@@ -24,10 +24,7 @@ return new class extends Migration
 
 
             $table->unsignedBigInteger('subcategory_id');
-            $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('set null');
-
-            $table->unsignedBigInteger('product_statuses_id');
-            $table->foreign('product_statuses_id')->references('id')->on('product_statuses')->onDelete('set null');
+            $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('cascade');
 
             $table->timestamps();
         });
