@@ -15,6 +15,10 @@ class Product extends Model
         return $this->belongsTo(Subcategory::class);
     }
 
+    public function unit() {
+        return $this->belongsTo(Unit::class);
+    }
+
 
     //relacion uno a muchos polimorfica
     public function images() {
